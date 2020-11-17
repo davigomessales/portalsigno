@@ -1,0 +1,13 @@
+<h2>Lista de Signos</h2>
+<ul class=signos>
+  <li *ngFor="let signo of signos$ | async" [class.selected]="signo.id === idSelecionado">
+      <a [routerLink]="['/signo', signo.id]">
+      <span class="badge">{{ signo.id }}</span>
+        {{ signo.nome }}
+    </a>
+  </li>
+</ul>
+
+<p>
+  <button (click)="voltar()">Voltar</button>
+</p>

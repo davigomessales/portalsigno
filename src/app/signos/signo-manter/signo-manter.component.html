@@ -1,0 +1,22 @@
+<h2>Editar Signo</h2>
+<div *ngIf="signo$ | async as signo">
+  <h3>{{ signo.nome }}</h3>
+  <h5>De {{ signo.dataInicial.toLocaleDateString() }} a {{ signo.dataFinal.toLocaleDateString() }}</h5>
+  <h5>{{ signo.descricao }}</h5>
+  <div *ngIf="isEdita">
+    <div>
+      <label>Id: </label>{{ signo.id }}</div>
+    <div>
+      <label>Nome: </label>
+      <input [(ngModel)]="signo.nome" placeholder="Nome"/>
+    </div>
+    <div>
+      <label>Descricao: </label>
+      <input [(ngModel)]="signo.descricao" placeholder="Descricao"/>
+    </div>
+  </div>
+  <p>
+    <button (click)="permiteEdicao()">Editar</button>
+    <button (click)="gotosignos(signo)">Voltar</button>
+  </p>
+</div>

@@ -1,0 +1,16 @@
+<h2>Digite sua data de nascimento e descubra seu signo</h2>
+<div >
+    <div>
+      <label>Data de Nascimento: </label>
+      <input type="number" min="01" max="31" [(ngModel)]="dia" placeholder="Dia de Nascimento" />
+      <input type="number" min="01" max="12" [(ngModel)]="mes" placeholder="Mês de Nascimento"/>
+    </div>
+  </div>
+  <p>
+    <button (click)="descobreSigno()">Exibir Signo</button>
+    <button (click)="listaSignos()">Lista de Signos</button>
+  </p>
+  <div>
+    <div>
+      <signo-signo-exibir *ngIf="isClicado" [dataNascimento]="dataNascimento" ></signo-signo-exibir>
+    </div>
