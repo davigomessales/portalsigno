@@ -1,5 +1,5 @@
 # Portalsigno
-
+Esta aplicação simples recebe seu dia e mês e devolve o seu signo. Além disso, é possível listar e editar os signos. A aplicação faz uso de algumas validações básicas quanto a data e usa bindings, routings e interação de componentes.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
